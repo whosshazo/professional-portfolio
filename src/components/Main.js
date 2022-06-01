@@ -1,8 +1,11 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
+import PropTypes from "prop-types";
+import React from "react";
+import pic01 from "../images/pic01.jpg";
+import pic02 from "../images/pic02.jpg";
+import pic03 from "../images/pic03.jpg";
+import pic04 from "../images/sk8spot.png";
+import pic05 from "../images/pic05.png";
+import pic06 from "../images/cocky-cocktails.png";
 
 class Main extends React.Component {
   render() {
@@ -10,86 +13,125 @@ class Main extends React.Component {
       <div
         className="close"
         onClick={() => {
-          this.props.onCloseArticle()
+          this.props.onCloseArticle();
         }}
       ></div>
-    )
+    );
 
     return (
       <div
         ref={this.props.setWrapperRef}
         id="main"
-        style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
+        style={this.props.timeout ? { display: "flex" } : { display: "none" }}
       >
         <article
           id="intro"
-          className={`${this.props.article === 'intro' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
+          className={`${this.props.article === "intro" ? "active" : ""} ${
+            this.props.articleTimeout ? "timeout" : ""
           }`}
-          style={{ display: 'none' }}
+          style={{ display: "none" }}
         >
-          <h2 className="major">Intro</h2>
+          <h2 className="major">About</h2>
           <span className="image main">
-            <img src={pic01} alt="" />
+            <img src={pic01} alt="skateboarding pic" />
           </span>
           <p>
-            Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-            aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-            convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-            magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-            By the way, check out my <a href="#work">awesome work</a>.
+            Hi, my name is Ryan. I am a front-end web developer influenced by my
+            experience in high-speed photography and multimedia, with a desire
+            to build a more intuitive, user-friendly experience on the web. I
+            earned my certificate in full-stack development from the University
+            of Richmond Coding Bootcamp in May 2022. My newly developed skills
+            in JavaScript, CSS, React.js, MongoDB, and responsive web design
+            with Bootstrap and similar libraries help me combine my technical
+            and creative abilities in an agile work environment. While working
+            on a recent project, I applied aspects of UX/UI to design a
+            single-page MERN app that helps local musicians and venues host
+            shows for events, all from their fingertips on our mobile-first
+            configuration. I am excited to leverage my skills with a
+            cross-functional team to build better experiences and improve
+            software solutions on the web.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
-            libero eu nibh porttitor fermentum. Nullam venenatis erat id
-            vehicula viverra. Nunc ultrices eros ut ultricies condimentum.
-            Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae
-            dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in
-            lectus. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. In non lorem sit amet elit
-            placerat maximus. Pellentesque aliquam maximus risus, vel sed
-            vehicula.
+            In my free time I love spending time with my wife and two amazing
+            children, skateboarding, and working on old cars. My family gives me
+            the motivation to constistantly stay focused and driven in life.
+          </p>
+
+          <p>
+            If you have a second, check out my <a href="#work">awesome work</a>.
           </p>
           {close}
         </article>
 
         <article
           id="work"
-          className={`${this.props.article === 'work' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
+          className={`${this.props.article === "work" ? "active" : ""} ${
+            this.props.articleTimeout ? "timeout" : ""
           }`}
-          style={{ display: 'none' }}
+          style={{ display: "none" }}
         >
           <h2 className="major">Work</h2>
           <span className="image main">
-            <img src={pic02} alt="" />
+            <img src={pic05} alt="House Show home page" />
           </span>
+          <h3>House Show</h3>
           <p>
-            Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-            at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
-            urna nisi, fringila lorem et vehicula lacinia quam. Integer
-            sollicitudin mauris nec lorem luctus ultrices.
+            Fullstack: MERN | PWA | Bootstrap
+            <br></br>
+            Deployed:
+            <a href="https://house-show.herokuapp.com/"> House Show</a>
+            <br></br>
+            GitHub:
+            <a href="https://github.com/Haguermeister/house-show">
+              {" "}
+              Check it out
+            </a>
           </p>
+
+          <span className="image main">
+            <img src={pic04} alt="Sk8Spotter main page" />
+          </span>
+          <h3>Sk8 Spotter</h3>
           <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
+            Fullstack: Handlebars | CSS | JavaScript | Sequelize | Bootstrap |
+            Express | Node | NPM
+            <br></br>
+            Deployed:{" "}
+            <a href="https://sk8spotter.herokuapp.com/login"> Sk8 Spotter</a>
+            <br></br>
+            GitHub:{" "}
+            <a href="https://github.com/sora64/sk8spotter"> Check it out</a>
           </p>
+
+          <span className="image main">
+            <img src={pic06} alt="" />
+          </span>
+          <h3>Cocky Cocktails</h3>
+          <p>
+            Frontend: HTML | CSS | JavaScript | Bulma
+            <br></br>
+            Deployed:{" "}
+            <a href="https://whosshazo.github.io/cocktail-project/">
+              {" "}
+              Cocky Cocktails
+            </a>
+            <br></br>
+            GitHub:{" "}
+            <a href="https://github.com/whosshazo/cocktail-project">
+              {" "}
+              Check it out
+            </a>
+          </p>
+
           {close}
         </article>
 
         <article
           id="about"
-          className={`${this.props.article === 'about' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
+          className={`${this.props.article === "about" ? "active" : ""} ${
+            this.props.articleTimeout ? "timeout" : ""
           }`}
-          style={{ display: 'none' }}
+          style={{ display: "none" }}
         >
           <h2 className="major">About</h2>
           <span className="image main">
@@ -109,10 +151,10 @@ class Main extends React.Component {
 
         <article
           id="contact"
-          className={`${this.props.article === 'contact' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
+          className={`${this.props.article === "contact" ? "active" : ""} ${
+            this.props.articleTimeout ? "timeout" : ""
           }`}
-          style={{ display: 'none' }}
+          style={{ display: "none" }}
         >
           <h2 className="major">Contact</h2>
           <form method="post" action="#">
@@ -137,7 +179,7 @@ class Main extends React.Component {
               </li>
             </ul>
           </form>
-          <ul className="icons">
+          {/* <ul className="icons">
             <li>
               <a
                 href="https://twitter.com/HuntaroSan"
@@ -164,11 +206,11 @@ class Main extends React.Component {
                 <span className="label">GitHub</span>
               </a>
             </li>
-          </ul>
+          </ul> */}
           {close}
         </article>
       </div>
-    )
+    );
   }
 }
 
@@ -179,6 +221,6 @@ Main.propTypes = {
   onCloseArticle: PropTypes.func,
   timeout: PropTypes.bool,
   setWrapperRef: PropTypes.func.isRequired,
-}
+};
 
-export default Main
+export default Main;
