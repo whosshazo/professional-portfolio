@@ -7,6 +7,7 @@ import pic04 from "../images/sk8spot.png";
 import pic05 from "../images/pic05.png";
 import pic06 from "../images/cocky-cocktails.png";
 import resume from "../assets/Ryan-DeShazo-Resume.pdf";
+import selfie from "../images/selfie.jpeg";
 
 class Main extends React.Component {
   render() {
@@ -34,7 +35,7 @@ class Main extends React.Component {
         >
           <h2 className="major">About</h2>
           <span className="image main">
-            <img src={pic01} alt="skateboarding pic" />
+            <img src={selfie} alt="skateboarding pic" />
           </span>
           <p>
             Hi, my name is Ryan. I am a front-end web developer influenced by my
@@ -58,9 +59,7 @@ class Main extends React.Component {
             the motivation to constistantly stay focused and driven in life.
           </p>
 
-          <p>
-            If you have a second, check out my <a href="#work">awesome work</a>.
-          </p>
+          <p>If you have a second, check out my awesome work.</p>
           {close}
         </article>
 
